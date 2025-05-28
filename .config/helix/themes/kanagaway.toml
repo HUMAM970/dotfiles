@@ -1,0 +1,3 @@
+inherits = "kanagawa"
+
+"ui.gutter" = { fg = "sumiInk6", bg = "sumiInk1" }

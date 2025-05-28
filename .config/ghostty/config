@@ -1,0 +1,24 @@
+theme = Kanagawa Wave
+shell-integration-features = no-cursor
+
+cursor-style = block
+cursor-style-blink = false
+
+font-size = 17
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+font-family = "JetBrainsMono Nerd Font"
+
+window-padding-x = 0
+window-padding-y = 0
+window-decoration = false
+window-theme = ghostty
+window-padding-balance = true
+
+gtk-single-instance = true
+gtk-tabs-location = bottom
+gtk-wide-tabs = false
+
+
+keybind = ctrl+shift+enter=unbind

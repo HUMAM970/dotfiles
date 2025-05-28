@@ -1,0 +1,9 @@
+# [[language]]
+# name = "go"
+# scope = "source.mylang"
+# injection-regex = "mylang"
+# file-types = ["mylang", "myl"]
+# comment-tokens = "#"
+# indent = { tab-width = 2, unit = "  " }
+# formatter = { command = "mylang-formatter" , args = ["--stdin"] }
+# language-servers = [ "mylang-lsp" ]

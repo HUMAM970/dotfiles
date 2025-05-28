@@ -1,0 +1,54 @@
+theme = "kanagaway"
+
+[editor]
+line-number               = "relative"
+mouse                     = false
+cursorline                = true
+middle-click-paste        = false
+continue-comments         = false
+# completion-replace        = true
+completion-trigger-len    = 1
+preview-completion-insert = false
+auto-format = true
+
+[editor.lsp]
+# auto-signature-help         = false
+display-signature-help-docs = false
+
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.auto-pairs]
+# "<" = ">"
+
+[keys.normal]
+esc   = ["collapse_selection", "keep_primary_selection"]
+H     = "goto_first_nonwhitespace"
+L     = "goto_line_end"
+J     = ["page_cursor_half_down", "align_view_center"]
+K     = ["page_cursor_half_up", "align_view_center"]
+"tab" = "no_op"
+
+[keys.normal.space]
+l = { d = ":set inline-diagnostics.cursor-line disable", h = ":set inline-diagnostics.cursor-line hint", w = ":set inline-diagnostics.cursor-line warning", e = ":set inline-diagnostics.cursor-line error" }
+
+[keys.select]
+H = "goto_first_nonwhitespace"
+L = "goto_line_end"
+
+[keys.insert]
+"C-space" = "completion"
+"C-s" = "signature_help"
+########################################
+up       = "no_op"
+down     = "no_op"
+left     = "no_op"
+right    = "no_op"
+pageup   = "no_op"
+pagedown = "no_op"
+home     = "no_op"
+end      = "no_op"
+########################################
