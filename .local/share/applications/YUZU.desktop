@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=YUZU
+Comment=Nintendo Switch Emulator
+Exec=/home/humam/Applications/YUZU.AppImage
+Icon=/home/humam/Applications/icons/YUZU.png
+Categories=Game;Emulator;
+Type=Application
+Terminal=false

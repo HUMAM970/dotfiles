@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=RPCS3
+Comment=PlayStation 3 Emulator
+Exec=/home/humam/Applications/RPCS3.AppImage
+Icon=/home/humam/Applications/icons/RPCS3.png
+Categories=Game;Emulator;
+Type=Application
+Terminal=false
