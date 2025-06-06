@@ -4,7 +4,7 @@ shell-integration-features = no-cursor
 cursor-style = block
 cursor-style-blink = false
 
-font-size = 17
+font-size = 15
 font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
