@@ -20,7 +20,7 @@ for_window [class=".*"] title_format ""
 
 
 exec --no-startup-id dex --autostart --environment i3
-output eDP-1 bg ~/.config/backgrounds/17.jpg fit
+output eDP-1 bg ~/Pictures/2.png fit
 exec --no-startup-id swaync 
 
 # options: 
