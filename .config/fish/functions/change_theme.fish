@@ -5,6 +5,13 @@ function change_theme
     end
 
     set theme_name $argv[1]
+	if [ $theme_name = 'default' ]
+		gsettings set org.gnome.desktop.interface gtk-theme "'Adwaita'"
+		gsettings set org.gnome.desktop.interface icon-theme "'Adwaita'"
+		rm -rf ~/.config/gtk-4.0/*
+		rm -rf ~/.cache/gtk-4.0/*
+	end
+
     set theme_dir "$HOME/.themes/$theme_name/gtk-4.0"
     set gtk_config_dir "$HOME/.config/gtk-4.0"
 
@@ -38,4 +45,8 @@ function change_theme
             echo "Warning: Not found in theme: $source"
         end
     end
+	
+	gsettings set org.gnome.desktop.interface gtk-theme $theme_name
+	gsettings set org.gnome.desktop.interface icon-theme $theme_name
+	rm -rf ~/.cache/gtk-4.0/*
 end
