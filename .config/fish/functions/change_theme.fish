@@ -10,6 +10,7 @@ function change_theme
 		gsettings set org.gnome.desktop.interface icon-theme "'Adwaita'"
 		rm -rf ~/.config/gtk-4.0/*
 		rm -rf ~/.cache/gtk-4.0/*
+		return
 	end
 
     set theme_dir "$HOME/.themes/$theme_name/gtk-4.0"

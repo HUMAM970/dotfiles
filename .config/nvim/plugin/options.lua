@@ -1,36 +1,24 @@
-local opt = vim.opt
-local o = vim.o
+vim.opt.inccommand = "split"
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.signcolumn = "yes"
+vim.opt.shada = { "'10", "<0", "s10", "h" }
+vim.opt.swapfile = false
+vim.opt.formatoptions:remove("o")
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.termguicolors = true
+vim.opt.cursorline = true
+vim.opt.clipboard:append("unnamedplus")
+vim.opt.shortmess:append("sI")
+vim.opt.more = false
 
-opt.inccommand = "split"
-
-opt.smartcase = true
-opt.ignorecase = true
-
-opt.number = true
-opt.relativenumber = true
-
-opt.splitbelow = true
-opt.splitright = true
-
-opt.signcolumn = "yes"
-opt.shada = { "'10", "<0", "s10", "h" }
-
-opt.swapfile = false
-
-opt.formatoptions:remove("o")
-
-opt.wrap = true
-opt.linebreak = true
-
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.termguicolors = true
-opt.cursorline = true
-opt.clipboard:append("unnamedplus")
-opt.shortmess:append("sI")
-
-opt.more = false
-
-o.showmode = false
-o.mouse = ""
-o.cmdheight = 0
+vim.o.showmode = false
+vim.o.mouse = ""
+vim.o.cmdheight = 0

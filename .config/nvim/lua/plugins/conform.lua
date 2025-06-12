@@ -1,8 +1,10 @@
-require("conform").setup({
+return {
+  'stevearc/conform.nvim',
+  opts = {
 	formatters_by_ft = {
-		lua = { "stylua" },
+		-- lua = { "stylua" },
 		-- go = { "gofumpt" },
-		-- php = { "phpcbf" },
+	-- php = { "phpcbf" },
 		-- js = { "ts_ls" },
 		-- ts = { "ts_ls" },
 	},
@@ -10,4 +12,5 @@ require("conform").setup({
 		timeout_ms = 500,
 		lsp_format = "fallback",
 	},
-})
+  },
+}
