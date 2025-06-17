@@ -41,3 +41,59 @@ if not pacman -Syu --noconfirm --needed $all_pkgs
     echo "❌ Package installation failed."
     exit 1
 end
+
+# Packages to ignore in /etc/pacman.conf because Artix doesn't use systemd
+
+# IgnorePkg = systemd systemd-libs systemd-resolvconf systemd-sysvcompat systemd-tests systemd-bootchart systemd-ukify \
+#             lib32-systemd python-systemd python-cysystemd prometheus-systemd-exporter \
+#             systemd-boot-manager systemd-language-server systemd-ui systemdgenie systemfd \
+#             zram-generator mkinitcpio-systemd-tool cachyos-calamares-qt6-next-systemd \
+#             cachyos-calamares-qt6-next-systemd-efi cachyos-calamares-qt6-systemd
+
+
+############ Same Packages in IgnorePkg above
+# cockpit
+# deepin-session
+# gnome-logs
+# kjournald
+# prometheus-systemd-exporter
+# python-cysystemd
+# python-systemd
+# systemctl-tui
+# systemd-bootchart
+# systemd-ui
+# systemdgenie
+# systemfd
+# zram-generator
+# cachyos-calamares-qt6-next-systemd
+# cachyos-calamares-qt6-next-systemd-efi
+# cachyos-calamares-qt6-systemd
+# cachyos-ksm-settings
+# systemd-boot-manager
+# systemd
+# systemd-libs
+# systemd-resolvconf
+# systemd-sysvcompat
+# systemd-tests
+# systemd-ukify
+# acme-user
+# cockpit
+# deepin-session
+# gnome-logs
+# kjournald
+# mkinitcpio-systemd-tool
+# netctl
+# nomad-driver-nspawn
+# prometheus-systemd-exporter
+# python-cysystemd
+# python-systemd
+# qopenvpn
+# ruby-sd_notify
+# systemctl-tui
+# systemd-bootchart
+# systemd-language-server
+# systemd-ui
+# systemdgenie
+# systemfd
+# zram-generator
+# lib32-systemd
