@@ -1,5 +1,13 @@
 return {
-	cmd = { 'clangd' },
-	root_markers = { '.clangd', 'compile_commands.json' },
-	filetypes = { 'c', 'cpp' }
+	cmd = { "clangd" },
+	filetypes = { "c", "cpp" },
+	root_markers = {
+		".clangd",
+		".clang-tidy",
+		".clang-format",
+		"compile_commands.json",
+		"compile_flags.txt",
+		"configure.ac",
+		".git",
+	},
 }

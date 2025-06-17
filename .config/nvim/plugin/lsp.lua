@@ -1,4 +1,9 @@
-vim.lsp.enable({ "clangd", "gopls", "luals" })
+vim.lsp.enable({
+	"rust-analyzer",
+	"clangd",
+	"gopls",
+	"luals",
+})
 
 vim.diagnostic.config({
 	virtual_text = {

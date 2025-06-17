@@ -22,3 +22,4 @@ vim.opt.more = false
 vim.o.showmode = false
 vim.o.mouse = ""
 vim.o.cmdheight = 0
+vim.o.cmdwinheight = 1

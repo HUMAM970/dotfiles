@@ -16,6 +16,13 @@ vim.keymap.set("n", "<M-s>", "<C-W>-")
 vim.keymap.set("n", "<leader>h", ":nohl<CR>")
 vim.keymap.set({ "n", "v", "x" }, "m", "%")
 
+-- vim.keymap.set("n", ":", ":<C-f>zta")
+-- vim.api.nvim_create_autocmd("CmdwinEnter", {
+-- 	callback = function()
+-- 		vim.keymap.set("n", "<Esc>", "oclose<CR>", { buffer = true, silent = true })
+-- 	end,
+-- })
+
 vim.keymap.set("n", "<leader>l", function()
 	local config = vim.diagnostic.config()
 	if config.virtual_text then
