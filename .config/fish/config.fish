@@ -1,11 +1,12 @@
-# source /usr/share/cachyos-fish-config/cachyos-config.fish
-# source ~/vulkan/1.4.309.0/setup.fish
+source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 set -Ux PATH $HOME/go/bin $PATH
-# set -Ux QT_QPA_PLATFORMTHEME qt6ct
-# set -Ux QT_QPA_PLATFORM wayland
-# set -Ue QT_STYLE_OVERRIDE
 
-alias vim='nvim'
+alias v='nvim'
+alias vc='nvim $HOME/.config/nvim'
+
 set -x EDITOR nvim
 set -x VISUAL nvim
+
+fish_vi_key_bindings
+#set path#set path

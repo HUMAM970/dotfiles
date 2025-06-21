@@ -1,11 +1,23 @@
-exec systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
-exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+# exec systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
+# exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+# exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment DISPLAY \
+                                         SWAYSOCK \
+                                         WAYLAND_DISPLAY \
+                                         XDG_CURRENT_DESKTOP
+
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY \
+                                                  SWAYSOCK \
+                                                  XDG_CURRENT_DESKTOP=sway \
+                                                  WAYLAND_DISPLAY
 
 set $mod Mod4
 
 set $terminal ghostty
-set $file_manager nautilus
+# set $file_manager yazi
 floating_modifier $mod
 
 
@@ -20,7 +32,7 @@ for_window [class=".*"] title_format ""
 
 
 exec --no-startup-id dex --autostart --environment i3
-output eDP-1 bg ~/Pictures/2.png fit
+output eDP-1 bg ~/Pictures/1.jpg fit
 exec --no-startup-id swaync 
 bindsym $mod+p exec swaync-client -t
 
@@ -56,9 +68,11 @@ bar {
     }
 }
 
-bindsym Print exec sway-screenshot -m region -o ~/Pictures
-bindsym $mod+d exec rofi -show drun 
+bindsym Print exec sh -c 'grim -g "$(slurp)" - | wl-copy'
+
+bindsym $mod+f exec yazi
 bindsym $mod+Return exec ghostty
+bindsym $mod+d exec rofi -show drun 
 bindsym $mod+q kill
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
