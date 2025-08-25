@@ -24,12 +24,12 @@ return {
 					end
 
 					return {
-						NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-						LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-						MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+						NormalDark = { bg = "#000000", fg = theme.ui.fg_dim },
+						LazyNormal = { bg = "#000000", fg = theme.ui.fg_dim },
+						MasonNormal = { bg = "#000000", fg = theme.ui.fg_dim },
 
 						TelescopeTitle = { fg = theme.ui.special, bold = true },
-						TelescopePromptNormal = { bg = theme.ui.bg_p1 },
+						TelescopePromptNormal = { bg = "#000000" },
 						TelescopePromptBorder = {
 							fg = theme.ui.bg_p1,
 							bg = theme.ui.bg_p1,
@@ -42,7 +42,7 @@ return {
 							fg = theme.ui.bg_m1,
 							bg = theme.ui.bg_m1,
 						},
-						TelescopePreviewNormal = { bg = theme.ui.bg_dim },
+						TelescopePreviewNormal = { bg = "#000000" },
 						TelescopePreviewBorder = {
 							bg = theme.ui.bg_dim,
 							fg = theme.ui.bg_dim,
@@ -60,8 +60,8 @@ return {
 					}
 				end,
 			})
-
 			vim.cmd("colorscheme kanagawa")
+			vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 		end,
 	},
 }

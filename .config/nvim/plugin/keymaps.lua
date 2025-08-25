@@ -1,7 +1,12 @@
-vim.keymap.set({ "n", "v", "x" }, "J", "<C-d>")
-vim.keymap.set({ "n", "v", "x" }, "K", "<C-u>")
-vim.keymap.set({ "n", "v", "x" }, "L", "$")
-vim.keymap.set({ "n", "v", "x" }, "H", "_")
+vim.keymap.set({ "n", "v", "x" }, "<C-j>", "<C-d>")
+vim.keymap.set({ "n", "v", "x" }, "<C-k>", "<C-u>")
+vim.keymap.set({ "n", "v", "x" }, "<C-l>", "$")
+vim.keymap.set({ "n", "v", "x" }, "<C-h>", "_")
+
+vim.keymap.set("n", "J", "<Nop>")
+vim.keymap.set("n", "K", "<Nop>")
+vim.keymap.set("n", "L", "<Nop>")
+vim.keymap.set("n", "H", "<Nop>")
 
 vim.keymap.set("n", "<M-j>", "<c-w><c-j>")
 vim.keymap.set("n", "<M-k>", "<c-w><c-k>")

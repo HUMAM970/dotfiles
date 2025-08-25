@@ -34,6 +34,8 @@ K     = ["page_cursor_half_up", "align_view_center"]
 
 [keys.normal.space]
 l = { d = ":set inline-diagnostics.cursor-line disable", h = ":set inline-diagnostics.cursor-line hint", w = ":set inline-diagnostics.cursor-line warning", e = ":set inline-diagnostics.cursor-line error" }
+e = "file_explorer_in_current_buffer_directory"
+E = "file_explorer"
 
 [keys.select]
 H = "goto_first_nonwhitespace"

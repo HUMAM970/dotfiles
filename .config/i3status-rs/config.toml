@@ -10,6 +10,11 @@ idle_fg = "#abcdef"
 icons = "awesome4"
 
 [[block]]
+block = "backlight"
+device = "intel_backlight"
+invert_icons = true
+
+[[block]]
 block = "battery"
 full_format = " $icon $percentage "
 charging_format = " $icon $percentage 󱐋 "
@@ -25,4 +30,3 @@ cmd = "pavucontrol"
 block = "time"
 interval = 5
 format = " $timestamp.datetime(f:'%a %d/%m %R') "
-

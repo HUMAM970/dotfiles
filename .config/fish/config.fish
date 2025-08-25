@@ -1,6 +1,7 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
+source $HOME/Vulkan/setup-env.fish
 
-set -Ux PATH $HOME/go/bin $PATH
+# set -U PATH $HOME/go/bin $PATH
 
 alias v='nvim'
 alias vc='nvim $HOME/.config/nvim'

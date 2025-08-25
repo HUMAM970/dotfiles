@@ -7,6 +7,12 @@ return {
 		keymap = {
 			preset = "default",
 		},
+		completion = {
+			-- ghost_text = { enabled = true },
+			menu = {
+				auto_show = false,
+			},
+		},
 		appearance = {
 			nerd_font_variant = "mono",
 		},

@@ -1,4 +1,6 @@
 theme = Kanagawa Wave
+background = #000000
+
 shell-integration-features = no-cursor
 
 cursor-style = block

@@ -1,2 +1,4 @@
 IndentWidth: 4
 ColumnLimit: 130
+IncludeBlocks: Preserve
+SortIncludes: Never
