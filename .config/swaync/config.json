@@ -1,5 +1,5 @@
 "timeout": {
-  "low": 4,
-  "normal": 4,
-  "critical": 4
+  "low": 3,
+  "normal": 3,
+  "critical": 3
 }

@@ -7,3 +7,8 @@
 # indent = { tab-width = 2, unit = "  " }
 # formatter = { command = "mylang-formatter" , args = ["--stdin"] }
 # language-servers = [ "mylang-lsp" ]
+
+[[language]]
+name = "c"
+# language-servers = ["clangd"]
+auto-format = true

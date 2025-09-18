@@ -31,7 +31,7 @@
 ;sql
 (
  (comment) @cmt
- (#eq? @cmt "//sql_code")
+ (#eq? @cmt "//sqlcode")
  .
  (const_declaration 
    (const_spec
