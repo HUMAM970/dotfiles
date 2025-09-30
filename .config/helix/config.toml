@@ -6,8 +6,7 @@ mouse                     = false
 cursorline                = true
 middle-click-paste        = false
 continue-comments         = false
-# completion-replace        = true
-completion-trigger-len    = 1
+auto-completion = false
 preview-completion-insert = false
 auto-format = true
 

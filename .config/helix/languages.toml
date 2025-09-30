@@ -9,6 +9,10 @@
 # language-servers = [ "mylang-lsp" ]
 
 [[language]]
-name = "c"
-# language-servers = ["clangd"]
-auto-format = true
+name       = "c"
+indent     = { tab-width = 4, unit = "\t" }
+file-types = ["c", "h"]
+
+[[language]]
+name        = "go"
+auto-format = false
