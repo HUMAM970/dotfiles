@@ -1,14 +1,18 @@
-exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
-exec systemctl --user import-environment DISPLAY \
-                                         SWAYSOCK \
-                                         WAYLAND_DISPLAY \
-                                         XDG_CURRENT_DESKTOP
+# exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
+# exec systemctl --user import-environment DISPLAY \
+#                                          SWAYSOCK \
+#                                          WAYLAND_DISPLAY \
+#                                          XDG_CURRENT_DESKTOP
 
-exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY \
-                                                  SWAYSOCK \
-                                                  XDG_CURRENT_DESKTOP=sway \
-                                                  WAYLAND_DISPLAY
+# exec hash dbus-update-activation-environment 2>/dev/null && \
+#      dbus-update-activation-environment --systemd DISPLAY \
+#                                                   SWAYSOCK \
+#                                                   XDG_CURRENT_DESKTOP=sway \
+#                                                   WAYLAND_DISPLAY
+
+exec systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 set $mod Mod4
 
@@ -28,7 +32,7 @@ for_window [class=".*"] title_format ""
 
 
 exec --no-startup-id dex --autostart --environment i3
-output eDP-1 bg ~/Pictures/3.jpg fit
+output eDP-1 bg ~/Pictures/1.jpg fit
 exec --no-startup-id swaync 
 bindsym $mod+p exec swaync-client -t
 
@@ -42,8 +46,8 @@ input "type:touchpad" {
 }
 
 input "type:keyboard" {
-	xkb_layout us,ara
-	xkb_options ctrl:swapcaps,grp:alt_shift_toggle
+	xkb_layout us
+	xkb_options ctrl:swapcaps
 	repeat_rate 50
     repeat_delay 250
 }

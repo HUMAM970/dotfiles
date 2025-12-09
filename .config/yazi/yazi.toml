@@ -1,3 +1,8 @@
 [mgr]
+ratio = [0, 2, 6]
 show_hidden = true
-# sort_by = "alphabetical"
+
+[opener]
+play = []
+edit = []
+open = []
