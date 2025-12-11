@@ -1,0 +1,6 @@
+local input = io.read("*a")
+local s = input:gsub("[%s_]+", " ")
+s = s:gsub("^%l", string.upper)
+s = s:gsub(" (%a)", function(c) return c:upper() end)
+s = s:gsub("%s+", "")
+io.write(s)

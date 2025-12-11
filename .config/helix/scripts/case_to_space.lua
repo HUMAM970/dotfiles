@@ -1,0 +1,6 @@
+local input = io.read("*a")
+local output = input:gsub("_", " ")
+output = output:gsub("(%u)", " %1")
+output = output:gsub("%s+", " ")
+output = output:gsub("^%s+", ""):gsub("%s+$", "")
+io.write(output)

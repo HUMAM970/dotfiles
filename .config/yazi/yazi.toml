@@ -2,7 +2,7 @@
 ratio = [0, 2, 6]
 show_hidden = true
 
-[opener]
-play = []
-edit = []
-open = []
+# [opener]
+# play = []
+# edit = []
+# open = []
