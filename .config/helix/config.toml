@@ -64,7 +64,8 @@ _     = ":pipe lua ~/.config/helix/scripts/rm_underscore.lua"
 
 [keys.normal.g]
 l = [ ":new", ":insert-output lazygit", ":bc!", ":redraw" ]
-y = [ ":new", ":insert-output ~/.config/helix/scripts/yazi.fish", "goto_file", ":bp", ":bc!", ":redraw" ]
+y = "@:insert-output ~/.config/helix/scripts/yazi.fish ./%[buffer_name]<ret>_\"aduu:o <C-r>a<ret>:redraw<ret>"
+Y = "@:insert-output ~/.config/helix/scripts/yazi.fish<ret>_\"aduu:o <C-r>a<ret>:redraw<ret>"
 
 [keys.select]
 c = "toggle_comments"
@@ -87,6 +88,7 @@ _     = ":pipe lua ~/.config/helix/scripts/rm_underscore.lua"
 "C-space" = "completion"
 "C-s"     = "signature_help"
 "C-u"     = "@<esc>hmiw<A-`>;li"
+"C-p"     = "@<esc>hmiw<A-`>;li"
 up        = "no_op"
 down      = "no_op"
 left      = "no_op"
