@@ -13,6 +13,7 @@ layout = [ "diff", "spacer", "diagnostics", "spacer", "spacer" ]
 
 [editor.lsp]
 auto-signature-help         = false
+display-color-swatches      = false
 display-signature-help-docs = false
 
 [editor.cursor-shape]
@@ -63,7 +64,7 @@ _     = ":pipe lua ~/.config/helix/scripts/rm_underscore.lua"
 -     = ":pipe lua ~/.config/helix/scripts/rm_hyphens.lua"
 
 [keys.normal.g]
-l = [ ":new", ":insert-output lazygit", ":bc!", ":redraw" ]
+# l = [ ":new", ":insert-output lazygit", ":bc!", ":redraw" ]
 y = "@:insert-output ~/.config/helix/scripts/yazi.fish ./%[buffer_name]<ret>_\"aduu:o <C-r>a<ret>:redraw<ret>"
 Y = "@:insert-output ~/.config/helix/scripts/yazi.fish<ret>_\"aduu:o <C-r>a<ret>:redraw<ret>"
 
@@ -71,6 +72,9 @@ Y = "@:insert-output ~/.config/helix/scripts/yazi.fish<ret>_\"aduu:o <C-r>a<ret>
 c = "toggle_comments"
 H = "goto_first_nonwhitespace"
 L = "goto_line_end"
+
+# [keys.select.f]
+# h = "@:pipe superhtml fmt --stdin<ret><esc>"
 
 [keys.select.t]
 u     = ":pipe lua ~/.config/helix/scripts/capitalize.lua"

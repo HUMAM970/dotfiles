@@ -7,5 +7,69 @@ name   = "cpp"
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
-name        = "go"
-# auto-format = false
+name   = "html"
+language-servers = [ "superhtml" ]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [ { name = "tsl", except-features = [ "format" ] }, "biome", "twls"]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [ { name = "tsl", except-features = [ "format" ] }, "biome", "twls"]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[language]]
+name = "tsx"
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ { name = "tsl", except-features = [ "format" ] }, "biome", "twls"]
+auto-format = true
+
+[[language]]
+name = "jsx"
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ { name = "tsl", except-features = [ "format" ] }, "biome", "twls"]
+auto-format = true
+
+[[language]]
+name = "json"
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "biome" ]
+auto-format = true
+
+[[language]]
+name = "jsonc"
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "biome" ]
+auto-format = true
+
+[language-server.superhtml]
+command = "superhtml"
+args = ["lsp"]
+
+[language-server.yamls]
+command = "yaml-language-server"
+args = ["--stdio"]
+
+[language-server.tsl]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+[language-server.biome]
+command = "biome-linux-x64"
+args = ["lsp-proxy"]
+
+[language-server.biome.config]
+fixAll.biome = true
+
+[language-server.twls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[language-server.twls.config]
+tailwindCSS.classFunctions = ["cva", "cx"]

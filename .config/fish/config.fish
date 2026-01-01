@@ -9,4 +9,6 @@ alias vc='nvim $HOME/.config/nvim'
 set -x EDITOR helix
 set -x VISUAL helix
 
+set fish_greeting ""
+
 fish_vi_key_bindings

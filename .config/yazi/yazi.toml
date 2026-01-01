@@ -1,6 +1,7 @@
 [mgr]
 ratio = [0, 2, 6]
 show_hidden = true
+mouse_events = []
 
 # [opener]
 # play = []
