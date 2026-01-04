@@ -6,9 +6,21 @@ indent = { tab-width = 4, unit = "    " }
 name   = "cpp"
 indent = { tab-width = 4, unit = "    " }
 
+# [language-server.kdl_lsp]
+# command = "kdl-lsp"
+
+# [[language]]
+# name = "kdl"
+# language-servers = [ "kdl_lsp" ]
+# auto-format = true
+# indent = { tab-width = 4, unit = "    " }
+# scope = "source.kdl"
+# injection-regex = "kdl"
+# file-types = ["kdl"]
+
 [[language]]
 name   = "html"
-language-servers = [ "superhtml" ]
+language-servers = [ "superhtml", "twls" ]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 

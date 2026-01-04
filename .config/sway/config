@@ -68,7 +68,11 @@ bar {
     }
 }
 
-bindsym Print exec 'grim -g "$(slurp)" - | wl-copy'
+# bindsym Print exec 'grim -g "$(slurp)" - | wl-copy'
+# grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+
+bindsym Print exec grim -g "$(slurp)" - | wl-copy
+bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png
 
 # bindsym $mod+f exec 'yazi' 
 bindsym $mod+Return exec ghostty
