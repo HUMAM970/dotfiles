@@ -26,6 +26,8 @@ set -x PATH "$HOME/flutter/bin" $PATH
 set -x EDITOR helix
 set -x VISUAL helix
 
+alias hx helix
+
 set fish_greeting ""
 
 fish_vi_key_bindings

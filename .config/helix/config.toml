@@ -9,7 +9,7 @@ continue-comments         = false
 middle-click-paste        = false
 preview-completion-insert = false
 [editor.gutters]
-layout = [ "diff", "spacer", "diagnostics", "spacer", "spacer" ]
+layout = [ "diff", "diagnostics", "spacer", "spacer", "spacer", "spacer" ]
 
 [editor.lsp]
 auto-signature-help         = false

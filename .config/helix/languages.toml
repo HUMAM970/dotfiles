@@ -85,3 +85,6 @@ args = ["--stdio"]
 
 [language-server.twls.config]
 tailwindCSS.classFunctions = ["cva", "cx"]
+
+[language-server.qmlls]
+command = "qmlls6"
