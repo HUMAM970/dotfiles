@@ -34,7 +34,7 @@ for_window [class=".*"] title_format ""
 exec --no-startup-id dex --autostart --environment i3
 output eDP-1 bg ~/Pictures/1.jpg fit
 exec --no-startup-id swaync 
-bindsym $mod+p exec swaync-client -t
+bindsym $mod+p exec hyprpicker -a
 
 
 # options: 

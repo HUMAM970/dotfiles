@@ -4,7 +4,7 @@ SETUVAR --export --path PATH:/home/humam/go/bin\x1e/home/humam/Vulkan/x86_64/bin
 SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
 SETUVAR __fish_initialized:4300
-SETUVAR fish_user_paths:/home/humam/go/bin\x1e/usr/bin
+SETUVAR fish_user_paths:/home/humam/Android/Sdk/emulator\x1e/home/humam/Android/Sdk/build\x2dtools/34\x2e0\x2e0\x1e/home/humam/Android/Sdk/platform\x2dtools\x1e/home/humam/Android/Sdk/cmdline\x2dtools/latest/bin\x1e/home/humam/go/bin\x1e/usr/bin
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute

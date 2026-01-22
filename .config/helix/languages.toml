@@ -6,18 +6,6 @@ indent = { tab-width = 4, unit = "    " }
 name   = "cpp"
 indent = { tab-width = 4, unit = "    " }
 
-# [language-server.kdl_lsp]
-# command = "kdl-lsp"
-
-# [[language]]
-# name = "kdl"
-# language-servers = [ "kdl_lsp" ]
-# auto-format = true
-# indent = { tab-width = 4, unit = "    " }
-# scope = "source.kdl"
-# injection-regex = "kdl"
-# file-types = ["kdl"]
-
 [[language]]
 name   = "html"
 language-servers = [ "superhtml", "twls" ]
@@ -26,36 +14,30 @@ auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [ { name = "tsl", except-features = [ "format" ] }, "biome", "twls"]
+language-servers = [ { name = "tsl", except-features = [ "format" ] }, { name = "biome", only-features = [ "format" ]}, "twls"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 
 [[language]]
 name = "typescript"
-language-servers = [ { name = "tsl", except-features = [ "format" ] }, "biome", "twls"]
+language-servers = [ { name = "tsl", except-features = [ "format" ] }, { name = "biome", only-features = [ "format" ]}, "twls"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 
 [[language]]
 name = "tsx"
 indent = { tab-width = 4, unit = "    " }
-language-servers = [ { name = "tsl", except-features = [ "format" ] }, "biome", "twls"]
+language-servers = [ { name = "tsl", except-features = [ "format" ] }, { name = "biome", only-features = [ "format" ]}, "twls"]
 auto-format = true
 
 [[language]]
 name = "jsx"
 indent = { tab-width = 4, unit = "    " }
-language-servers = [ { name = "tsl", except-features = [ "format" ] }, "biome", "twls"]
+language-servers = [ { name = "tsl", except-features = [ "format" ] }, { name = "biome", only-features = [ "format" ]}, "twls"]
 auto-format = true
 
 [[language]]
 name = "json"
-indent = { tab-width = 4, unit = "    " }
-language-servers = [ "biome" ]
-auto-format = true
-
-[[language]]
-name = "jsonc"
 indent = { tab-width = 4, unit = "    " }
 language-servers = [ "biome" ]
 auto-format = true

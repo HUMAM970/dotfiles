@@ -23,6 +23,6 @@ gtk-single-instance        = true
 gtk-tabs-location          = bottom
 gtk-wide-tabs              = false
 
-
+keybind                    = ctrl+enter=unbind
 keybind                    = ctrl+shift+enter=unbind
                             
