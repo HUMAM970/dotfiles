@@ -26,7 +26,6 @@ return {
 					return {
 						NormalDark = { bg = "#000000", fg = theme.ui.fg_dim },
 						LazyNormal = { bg = "#000000", fg = theme.ui.fg_dim },
-						MasonNormal = { bg = "#000000", fg = theme.ui.fg_dim },
 
 						TelescopeTitle = { fg = theme.ui.special, bold = true },
 						TelescopePromptNormal = { bg = "#000000" },
@@ -61,7 +60,6 @@ return {
 				end,
 			})
 			vim.cmd("colorscheme kanagawa")
-			vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 		end,
 	},
 }

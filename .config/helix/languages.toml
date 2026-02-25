@@ -70,3 +70,14 @@ tailwindCSS.classFunctions = ["cva", "cx"]
 
 [language-server.qmlls]
 command = "qmlls6"
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config]
+templateExtensions = ["tmpl"]
+
+[[language]]
+name = "go"
+file-types = ["go", "tmpl"]
+language-servers = [ "gopls" ]

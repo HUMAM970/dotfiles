@@ -19,8 +19,17 @@ return {
 				view_options = {
 					show_hidden = true,
 				},
+
+				float = {
+					padding = 1,
+				},
 			})
-			vim.keymap.set("n", "<leader>e", require("oil").toggle_float)
+
+			vim.keymap.set("n", "<leader>e",
+				function()
+					require("oil").toggle_float(nil, { preview = { vertical = true } }, nil)
+				end
+			)
 		end,
 	},
 }

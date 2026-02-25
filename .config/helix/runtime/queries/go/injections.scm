@@ -39,3 +39,16 @@
 	 value: (expression_list
 			  (raw_string_literal) @injection.content)))
  (#set! injection.language "sql"))
+
+
+; gotmpl
+(
+ (comment) @cmt
+ (#match? @cmt "//\\s?gotmpl")
+ .
+ (const_declaration 
+   (const_spec
+     name: (identifier) 
+     value: (expression_list
+              (raw_string_literal) @injection.content)))
+ (#set! injection.language "gotmpl"))

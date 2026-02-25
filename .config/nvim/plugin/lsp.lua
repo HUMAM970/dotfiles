@@ -1,8 +1,13 @@
 vim.lsp.enable({
 	"rust-analyzer",
-	-- "clangd",
+	"clangd",
 	"gopls",
 	"luals",
+	"biome",
+	"tailwindcss",
+	"tsls",
+	"yamlls",
+	"superhtml",
 })
 
 vim.diagnostic.config({
@@ -24,11 +29,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		if client:supports_method("textDocument/implementation") then
-			set_lsp_keymap("n", "gim", vim.lsp.buf.implementation)
+			set_lsp_keymap("n", "gi", vim.lsp.buf.implementation)
 		end
 
 		if client:supports_method("textDocument/codeAction") then
-			set_lsp_keymap({ "n", "v" }, "gca", vim.lsp.buf.code_action)
+			set_lsp_keymap({ "n", "v" }, "ga", vim.lsp.buf.code_action)
 		end
 
 		if client:supports_method("textDocument/declaration") then
@@ -40,7 +45,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		if client:supports_method("textDocument/typeDefinition") then
-			set_lsp_keymap("n", "gtd", vim.lsp.buf.type_definition)
+			set_lsp_keymap("n", "gt", vim.lsp.buf.type_definition)
 		end
 
 		if client:supports_method("textDocument/hover") then
@@ -48,22 +53,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		-- if client:supports_method('textDocument/completion') then
-		-- 	vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+		-- vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
 		-- end
-
-		if client.name ~= "luals" then
-			if
-				not client:supports_method("textDocument/willSaveWaitUntil")
-				and client:supports_method("textDocument/formatting")
-			then
-				vim.api.nvim_create_autocmd("BufWritePre", {
-					group = vim.api.nvim_create_augroup("lspgroup", { clear = false }),
-					buffer = args.buf,
-					callback = function()
-						vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 500 })
-					end,
-				})
-			end
-		end
 	end,
 })
